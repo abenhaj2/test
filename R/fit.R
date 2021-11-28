@@ -48,7 +48,7 @@
 fit<-function(formule, data, mode="mini_batch",batch_size=32,alpha=0.01,max_iter=500, tol=0.001,ncores=NA, parallel=FALSE, plot=FALSE,lambda=0,beta=1){
 
   #Preprocessing of the dataframe
-  data_train=as.data.frame(lapply(data_train,process_na))
+  data_train=as.data.frame(lapply(data,process_na))
   nLignes = nrow(data_train)
 
   if ((batch_size <= 0) || (batch_size > nLignes)) {
